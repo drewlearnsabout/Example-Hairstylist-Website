@@ -2,6 +2,7 @@
     <head>
         <title>Hairstyle</title>
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <main>
@@ -10,19 +11,41 @@
                     <h1>Hairy stylez</h1>
                 </header>
                 <nav>
-                    <a href="#">About</a>
-                    <a href="#">Gallery</a>
+                    <a href="#about">About</a>
+                    <a href="#gallery">Gallery</a>
                     <a href="#">Contact</a>
                 </nav>
             </div>
-            <div id="mid_part">
-                <section></section>
+            <div id="about">
+                <section id="#"></section>
                 <section></section>
             </div>
-            <div id="low_part">
-                <article></article>
+            <div id="gallery">
+                <section id="picture1">
+                    <button class="first_picture"><img id="fade_picture" src="https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/Picture%201.jpg?raw=true"></button>
+                    <div class="firstContent">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lacus placerat, placerat sapien imperdiet, tempor velit. Quisque lobortis, leo quis feugiat auctor, nulla dui porttitor elit, id porta eros sapien quis felis. Nunc commodo orci vitae pellentesque dictum.</p>
+                    </div>
+                </section>
             </div>
             <footer></footer>
         </main>
+
+        <script>
+            var coll = document.getElementsByClassName("first_picture");
+            var i;
+
+            for (i=0; coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var firstContent = this.nextElementSibling;
+                    if (firstContent.style.maxHeight) {
+                        firstContent.style.maxHeight = null;
+                    } else {
+                        firstContent.style.maxHeight = firstContent.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
     </body>
 </html>
