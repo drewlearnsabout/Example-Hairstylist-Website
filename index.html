@@ -24,19 +24,19 @@
                 </section>
             </div>
             <div id="gallery">
-                <section id="picture1">
+                <section id="picture1" class="pictures">
                     <button class="first_picture"><img id="fade_picture" src="https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/Picture%201.jpg?raw=true"></button>
                     <div class="firstContent">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lacus placerat, placerat sapien imperdiet, tempor velit. Quisque lobortis, leo quis feugiat auctor, nulla dui porttitor elit, id porta eros sapien quis felis. Nunc commodo orci vitae pellentesque dictum.</p>
                     </div>
                 </section>
-                <section id="picture2">
+                <section id="picture2" class="pictures">
                         <button class="first_picture"><img id="fade_picture" src="https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/Picture%201.jpg?raw=true"></button>
                         <div class="firstContent">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lacus placerat, placerat sapien imperdiet, tempor velit. Quisque lobortis, leo quis feugiat auctor, nulla dui porttitor elit, id porta eros sapien quis felis. Nunc commodo orci vitae pellentesque dictum.</p>
                         </div>
                 </section>
-                <section id="picture3">
+                <section id="picture3" class="pictures">
                         <button class="first_picture"><img id="fade_picture" src="https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/Picture%201.jpg?raw=true"></button>
                         <div class="firstContent">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lacus placerat, placerat sapien imperdiet, tempor velit. Quisque lobortis, leo quis feugiat auctor, nulla dui porttitor elit, id porta eros sapien quis felis. Nunc commodo orci vitae pellentesque dictum.</p>
@@ -47,13 +47,20 @@
         </main>
 
         <script>
+            /* document accesses the page, getElementsByClassName accesses the class name first_picture */
+           
             var coll = document.getElementsByClassName("first_picture");
             var i;
-
-            for (i=0; coll.length; i++) {
+            /* for loop; i is the object that is accessed, coll.length is max of how many there are, and i++ increments up by 1; this all helps to process each object one at a time and goes through all of them */
+            for (i=0; i < coll.length; i++) {
+                /* coll[i] will select all the 'i' objects, .addEventListener is when an event happens it will start function */
                 coll[i].addEventListener("click", function() {
+                    /* 'this', think of the glass example.  The scope, 'this', is the glass and the orange is the funtion, and the basin is the windows, or document */
                     this.classList.toggle("active");
+                    /* things are not always straight forward.  classList returns an array with properties on it, toggle will add remove an object in the array */
+                    /* var firstContent is my caption.  nextElementSibling will look at the next thing over, the sibling */
                     var firstContent = this.nextElementSibling;
+                    
                     if (firstContent.style.maxHeight) {
                         firstContent.style.maxHeight = null;
                     } else {

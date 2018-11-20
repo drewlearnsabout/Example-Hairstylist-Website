@@ -18,7 +18,7 @@ nav {
     background: silver;
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
     grid-gap: 2em;
 }
 
@@ -49,18 +49,21 @@ nav a {
     font-size: 0.8em;
 }
 
-#picture1 {
+#gallery {
     width: 100%;
+    display: grid;
+    grid-gap: 1em 5em;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 200px));
 }
 
 #fade_picture {
-    height: 15em;
-    width: 15em;
+    height: 14em;
+    width: 14.6em;
 }
 
 .first_picture {
     cursor: pointer;
-    padding: 1em;
+    padding: 0.2px;
     width: 100%;
 }
 
