@@ -3,6 +3,7 @@
         <title>Hairstyle</title>
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </head>
     <body>
@@ -11,7 +12,7 @@
                 <header>
                     <h1>Hairy stylez</h1>
                 </header>
-                <nav>
+                <nav id="navbar">
                     <a href="#about">About</a>
                     <a href="#gallery">Gallery</a>
                     <a href="#contact">Contact</a>
@@ -31,31 +32,44 @@
                     </div>
                 </section>
                 <section id="picture2" class="pictures">
-                    <button class="first_picture"><img id="fade_picture" src="https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/Picture%201.jpg?raw=true"></button>
+                    <button class="first_picture"><img id="fade_picture" src="https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/Picture%202.jpg?raw=true"></button>
                     <div class="firstContent">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lacus placerat, placerat sapien imperdiet, tempor velit. Quisque lobortis, leo quis feugiat auctor, nulla dui porttitor elit, id porta eros sapien quis felis. Nunc commodo orci vitae pellentesque dictum.</p>
                     </div>
                 </section>
                 <section id="picture3" class="pictures">
-                    <button class="first_picture"><img id="fade_picture" src="https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/Picture%201.jpg?raw=true"></button>
+                    <button class="first_picture"><img id="fade_picture" src="https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/picture%203.jpg?raw=true"></button>
                     <div class="firstContent">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lacus placerat, placerat sapien imperdiet, tempor velit. Quisque lobortis, leo quis feugiat auctor, nulla dui porttitor elit, id porta eros sapien quis felis. Nunc commodo orci vitae pellentesque dictum.</p>
                     </div>
                 </section>
                 <section id="picture4" class="pictures">
-                    <button class="first_picture"><img id="fade_picture" src="https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/Picture%201.jpg?raw=true"></button>
+                    <button class="first_picture"><img id="fade_picture" src="https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/Picture%204.jpg?raw=true"></button>
                     <div class="firstContent">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lacus placerat, placerat sapien imperdiet, tempor velit. Quisque lobortis, leo quis feugiat auctor, nulla dui porttitor elit, id porta eros sapien quis felis. Nunc commodo orci vitae pellentesque dictum.</p>
                     </div>
                 </section>
                 <section id="picture5" class="pictures">
-                    <button class="first_picture"><img id="fade_picture" src="https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/Picture%201.jpg?raw=true"></button>
+                    <button class="first_picture"><img id="fade_picture" src="https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/Picture%205.jpg?raw=true"></button>
                     <div class="firstContent">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lacus placerat, placerat sapien imperdiet, tempor velit. Quisque lobortis, leo quis feugiat auctor, nulla dui porttitor elit, id porta eros sapien quis felis. Nunc commodo orci vitae pellentesque dictum.</p>
                     </div>
                 </section>
             </div>
-            <footer></footer>
+            <footer>
+                <section id="contact">
+                    <button class="first_picture"><p>Contact me</p></button>
+                    <div class="firstContent">
+                        <form id="contact_me">
+                            <input class="contact_me_class" id="name" type="text" placeholder="Name" required>
+                            <input class="contact_me_class" id="email" type="email" placeholder="Email" required>
+                            <input class="contact_me_class" id="addition" type="number" placeholder="What's 1 + 2?" required>
+                            <textarea class="contact_me_class" id="comments" placeholder="Add comments or inquiries" rows="5" cols="19"></textarea>
+                            <button class="contact_me_class" id="submit" type="submit">Submit</button> 
+                        </form>
+                    </div>
+                </section>
+            </footer>
         </main>
 
         <script>
@@ -79,6 +93,18 @@
                         firstContent.style.maxHeight = firstContent.scrollHeight + "px";
                     }
                 });
+            }
+
+            window.onscroll = function() {myFunction()};
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
             }
         </script>
     </body>

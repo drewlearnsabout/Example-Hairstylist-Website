@@ -10,6 +10,7 @@ header h1 {
     height: 10em;
     text-align: center;
     padding-top: 7em;
+    font-family: 'Cedarville Cursive', cursive;
 }
 
 nav {
@@ -28,7 +29,17 @@ nav a {
     justify-self: center;
     color: rgb(182,126,1);
     color: linear-gradient(48deg, rgba(182,126,1,1) 1%, rgba(222,120,36,1) 71%, rgba(255,255,255,1) 100%);
+    text-shadow: 2px 2px 4px rgb(129, 100, 100), 2px 2px 4px white;
+}
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + #about {
+    padding-top: 60px;
 }
 
 #about {
@@ -50,7 +61,7 @@ nav a {
 }
 
 #gallery {
-    margin: 0 0 0 1em;
+    margin: 4em 1em 0 1em;
     width: 100%;
     display: grid;
     grid-gap: 1em 5em;
@@ -73,11 +84,53 @@ nav a {
 }
 
 .firstContent {
-    background: gray;
+    background: rgb(173, 173, 173);
     border-radius: 0 0 5px 5px;
     color: white;
     overflow: hidden;
     width: 100%;
     max-height: 0;
     transition: max-height 0.2s ease-out;
+}
+
+.firstContent p {
+    padding: 1em;
+    font-size: 0.75em;
+}
+
+footer {
+    margin: 4em 0 6em 0;
+    display: grid;
+    justify-content: center;
+}
+
+#contact_me {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "name email"
+        "addition comments"
+        "submit submit";
+    grid-gap: 1em 1em;
+}
+
+#name { grid-area: name;}
+#email { grid-area: email;}
+#addition {grid-area: addition;}
+#comments {grid-area: comments;}
+#submit {grid-area: submit;}
+
+#contact button {
+    font-family: 'Cedarville Cursive', cursive;
+    color: white;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 4px rgb(129, 100, 100), 2px 2px 4px white;
+    background: rgb(173, 173, 173);
+    border-radius: 4px 4px 0 0;
+}
+
+.contact_me_class {
+    border-radius: 0.3em;
+    font-family:'Montserrat', sans-serif;;
 }
