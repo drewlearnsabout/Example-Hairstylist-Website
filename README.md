@@ -3,6 +3,7 @@
 Example website for freelance hairstylist
 
 <html>
-<img src="">
+  <p>Preview of what it currently looks like</p>
+  <img src="https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/localhost_8080_index.html.png?raw=true">
   
 </html>
