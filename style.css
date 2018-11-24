@@ -13,6 +13,11 @@ header h1 {
     font-family: 'Cedarville Cursive', cursive;
 }
 
+header h1 #social_icons .social_icon_size {
+    height: 1em;
+    width: 1em;
+}
+
 nav {
     margin-top: -1.5em;
     padding: 1em;
@@ -21,6 +26,8 @@ nav {
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
     grid-gap: 2em;
+    border-top: 1px solid rgb(182,126,1);
+    border-bottom: 1px solid rgb(182,126,1);
 }
 
 nav a {
@@ -38,8 +45,8 @@ nav a {
     width: 100%;
 }
 
-.sticky + #about {
-    padding-top: 60px;
+.sticky, #about {
+    padding-top: 40px;
 }
 
 #about {
@@ -98,7 +105,7 @@ nav a {
     font-size: 0.75em;
 }
 
-footer {
+#contact {
     margin: 4em 0 6em 0;
     display: grid;
     justify-content: center;
@@ -121,16 +128,37 @@ footer {
 #comments {grid-area: comments;}
 #submit {grid-area: submit;}
 
+#submit:hover {
+    cursor: pointer;
+    background: rgb(180, 180, 180);
+}
+
 #contact button {
     font-family: 'Cedarville Cursive', cursive;
     color: white;
     font-size: 1.2em;
-    text-shadow: 2px 2px 4px rgb(129, 100, 100), 2px 2px 4px white;
     background: rgb(173, 173, 173);
-    border-radius: 4px 4px 0 0;
+    border: 1px solid rgb(211, 145, 3);
+    border-radius: 4px 4px 2px 2px;
 }
 
 .contact_me_class {
     border-radius: 0.3em;
     font-family:'Montserrat', sans-serif;;
+}
+
+#bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    width: 100%;
+    background: rgb(165, 165, 165);
+    color: white;
+    padding: 1em 0 0.5em 0;
+}
+
+#bottom #social_icons .social_icon_size {
+    height: 2.5em;
+    width: 2.5em;
+    padding: 0 1em 0 1em;
 }
