@@ -6,8 +6,8 @@ body {
 header h1 {
     background: url("https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/Hair%20banner2.jpg?raw=true");
     background-size: cover;
-    width: 100%;
     height: 10em;
+    width: 100%;
     text-align: center;
     padding-top: 7em;
     font-family: 'Cedarville Cursive', cursive;
@@ -20,11 +20,11 @@ header h1 #social_icons .social_icon_size {
 
 nav {
     margin-top: -1.5em;
-    padding: 1em;
+    padding: 1em 0 1em 0;
     background: silver;
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     grid-gap: 2em;
     border-top: 1px solid rgb(182,126,1);
     border-bottom: 1px solid rgb(182,126,1);
@@ -50,13 +50,13 @@ nav a {
 }
 
 #about {
-    margin: 0 2em;
+    padding: 1em;
     display: grid;
     justify-items: center;
 }
 
 #about_paragraph {
-    max-width: 750px;
+    max-width: 40em;
 }
 
 #paragraph1 {
@@ -68,9 +68,10 @@ nav a {
 }
 
 #gallery {
-    margin: 4em 1em 0 1em;
+    margin: 4em 0em 0 0em;
     width: 100%;
     display: grid;
+    justify-content: center;
     grid-gap: 1em 5em;
     grid-template-columns: repeat(auto-fit, minmax(40px, 200px));
 }
@@ -112,21 +113,11 @@ nav a {
 }
 
 #contact_me {
-    padding: 1em;
+    padding: 0.5em;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-        "name email"
-        "addition comments"
-        "submit submit";
+    grid-template-columns: 1fr;
     grid-gap: 1em 1em;
 }
-
-#name { grid-area: name;}
-#email { grid-area: email;}
-#addition {grid-area: addition;}
-#comments {grid-area: comments;}
-#submit {grid-area: submit;}
 
 #submit:hover {
     cursor: pointer;
@@ -144,7 +135,7 @@ nav a {
 
 .contact_me_class {
     border-radius: 0.3em;
-    font-family:'Montserrat', sans-serif;;
+    font-family:'Montserrat', sans-serif;
 }
 
 #bottom {
@@ -160,5 +151,29 @@ nav a {
 #bottom #social_icons .social_icon_size {
     height: 2.5em;
     width: 2.5em;
-    padding: 0 1em 0 1em;
+    padding: 0 0em 0 0em;
+}
+
+@media (max-width: 720px) {
+    nav {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 0.4em 0 0.4em 0;
+        grid-gap: 1em;
+    }
+    nav a {
+        font-size: 1em;
+    }
+
+    #contact {
+    }
+
+    #bottom p {
+        padding: 1em;
+    }
+
+    #bottom #social_icons .social_icon_size {
+        height: 1.8em;
+        width: 1.8em;
+        padding-top: 1.8em;
+    }
 }
