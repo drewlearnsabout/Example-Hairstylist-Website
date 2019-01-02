@@ -1,251 +1,82 @@
 body {
     margin: 0 auto;
-    font-family: 'Pacifico', cursive;
-    background: black;
-}
-
-#navbar {
-    padding: 1em 0 1em 0;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 2fr;
-    background: rgb(145, 145, 145);
-}
-
-#navbarGrid {
-    display: grid;
-    grid-gap: 1em 7em;
-    grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
-}
-
-#navbar img {
-    margin-left: 1em;
-}
-
-.navButtons {
-    color: black;
-    text-decoration: none;
-}
-
-.navButtons:hover {
-    color: rgb(255, 205, 41);
-}
-
-header {
-    position: relative;
-    display: grid;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 5.5em;
-}
-
-#banner {
-    width: 100%;
-    padding: 1em 0 1em 0;
-    position: absolute;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 17em 17em 17em 17em;
-    overflow: hidden;
-    grid-gap: 0.2em 0.2em;
-    z-index: -1;
-    background-color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
 }
 
 header h1 {
+    background: url("https://github.com/drewlearnsabout/Example-Hairstylist-Website/blob/master/Hair%20banner2.jpg?raw=true");
+    background-size: cover;
+    width: 100%;
+    height: 10em;
+    text-align: center;
+    padding-top: 7em;
+}
+
+nav {
+    margin-top: -1.5em;
+    padding: 1em;
+    background: silver;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    grid-gap: 2em;
+}
+
+nav a {
+    font-size: 1.5em;
+    text-decoration: none;
+    justify-self: center;
+    color: rgb(182,126,1);
+    color: linear-gradient(48deg, rgba(182,126,1,1) 1%, rgba(222,120,36,1) 71%, rgba(255,255,255,1) 100%);
+
+}
+
+#about {
+    margin: 0 2em;
     display: grid;
     justify-items: center;
-    font-weight: lighter;
+}
+
+#about_paragraph {
+    max-width: 750px;
+}
+
+#paragraph1 {
+    font-size: 1.2em;
+}
+
+#paragraph2 {
+    font-size: 0.8em;
+}
+
+#gallery {
     width: 100%;
-    margin-top: 2.5em;
-    padding: 0.5em;
-    color: rgb(255, 205, 41);
-    text-shadow: 1px 1px 1px rgb(255, 84, 84);
-    background-color: rgba(0, 0, 0, 0.815);
-    animation-name: bannerFade5;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+    display: grid;
+    grid-gap: 1em 5em;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 200px));
 }
 
-header h1 span {
-    font-size: 0.7em;
-}
-
-.pictures {
+#fade_picture {
     height: 14em;
-    width: 17em;
+    width: 14.6em;
 }
 
-#pic1 {
-    animation-name: bannerFade1;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-#pic2 {
-    animation-name: bannerFade2;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-#pic3 {
-    animation-name: bannerFade3;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-#pic4 {
-    animation-name: bannerFade4;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-#contactButton {
-    background: rgb(255, 205, 41);
-    font-family: 'Roboto Slab', serif;
-    font-size: 1em;
-    margin: 0 auto;
-    padding: 1em 2em 1em 2em;
+.first_picture {
     cursor: pointer;
-    display: grid;
-    border-radius: 1em;
+    padding: 0.2px;
+    width: 100%;
 }
 
-#contactButton:hover {
-    animation-name: resize;
-    animation-duration: 0.2s;
-    animation-fill-mode: forwards;
+.active, .first_picture:hover {
+    opacity: 0.7;
 }
 
-.topSection {
-    display: grid;
-    margin-top: 3em;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
-}
-
-#aboutSection {
-    font-family: 'Roboto Slab', serif;
-    max-width: 700px;
-    margin-left: 1em;
-    background: rgb(255, 205, 41);
-    padding: 1em;
-    border-radius: 1em;
-    font-size: 1.2em;
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-#aboutSection p span {
-    font-weight: bold;
-}
-
-#reviewSection {
-    margin: 0 auto;
-    max-width: 700px;
-    background: rgb(255, 205, 41);
-    padding: 1em;
-    border-radius: 1em;
-    font-size: 1.2em;
-    grid-area: 2 / 2 / 3 / 3;
-}
-
-#reviewSection p {
-    font-family: 'Roboto Slab', serif;
-}
-#reviewSection p span {
-    font-family: 'Pacifico', cursive;
-}
-
-@media (max-width: 720px) {
-    .pictures {
-        height: 7em;
-        width: 9em;
-    }
-    
-    #banner {
-        grid-template-columns: 9em 9em;
-    }
-
-    header h1 {
-        font-size: 1.6em;
-    }
-
-    .topSection {
-        grid-template-columns: 1fr;
-    }
-
-    #aboutSection {
-        grid-area: 1 / 1 / 2 / 2;
-        margin: 0;
-        border-radius: 0;
-    }
-
-    #reviewSection {
-        margin-top: 1em;
-        grid-area: 2 / 1 / 3 / 2;
-        border-radius: 0;
-    }
-}
-
-@keyframes resize {
-    0% {
-        font-size: 1em;
-    }
-
-    100% {
-        font-size: 1.5em;
-    }
-}
-
-@keyframes bannerFade1 {
-    0% {
-        opacity: 0;
-    }
-    10% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes bannerFade2 {
-    0% {
-        opacity: 0;
-    }
-    30% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes bannerFade3 {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes bannerFade4 {
-    0% {
-        opacity: 0;
-    }
-    70% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes bannerFade5 {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.firstContent {
+    background: gray;
+    border-radius: 0 0 5px 5px;
+    color: white;
+    overflow: hidden;
+    width: 100%;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
 }
